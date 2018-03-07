@@ -1,0 +1,12 @@
+server:
+  port: 9092
+  context-path: /
+  session:
+    timeout: 300
+  tomcat:
+    uri-encoding: UTF-8
+  compression:
+    enabled: true
+
+logging:
+  config: classpath:config/logback.xml

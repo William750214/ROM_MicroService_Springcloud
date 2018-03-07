@@ -1,0 +1,25 @@
+#server:
+#  port: 9091
+
+spring:
+  application:
+    name: app-user
+  cloud:
+    config:
+      label: master
+      profile: dev
+#      uri: http://admin:admin123@localhost:8888/
+      discovery:
+        enabled: true
+        service-id: infra-config
+      username: admin
+      password: admin123
+  rabbitmq:
+    host: 10.0.1.110
+    port: 5672
+    username: guest
+    password: guest
+
+
+
+

@@ -1,0 +1,27 @@
+server:
+  port: 9092
+  context-path: /
+  session:
+    timeout: 300
+  tomcat:
+    uri-encoding: UTF-8
+  compression:
+    enabled: true
+
+logging:
+  config: classpath:config/logback.xml
+
+spring:
+  application:
+    name: app-order
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      key01: value01
+      key02: value02
+

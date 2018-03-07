@@ -1,0 +1,21 @@
+server:
+  port: 8761
+
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://admin:admin123@${eureka.instance.hostname}:${server.port}/eureka/
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin123
+
